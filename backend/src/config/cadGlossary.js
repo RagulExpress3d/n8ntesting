@@ -1,0 +1,27 @@
+const CAD_GLOSSARY = [
+  { source: 'Mates', targetHint: 'mechanical constraints between components' },
+  { source: 'Sketch', targetHint: '2D parametric profile' },
+  { source: 'Sketches', targetHint: '2D parametric profiles' },
+  { source: 'Assembly', targetHint: 'multi-component product model' },
+  { source: 'Assemblies', targetHint: 'multi-component product models' },
+  { source: 'Drawing', targetHint: '2D documentation output' },
+  { source: 'Drawings', targetHint: '2D documentation outputs' },
+  { source: 'Simulation', targetHint: 'engineering analysis study' },
+  { source: 'FeatureManager', targetHint: 'Solidworks model tree panel' },
+  { source: 'BOM', targetHint: 'bill of materials table' },
+  { source: 'Configuration', targetHint: 'design variant setup' },
+  { source: 'Configurations', targetHint: 'design variant setups' },
+  { source: 'Exploded View', targetHint: 'assembly separation representation' },
+  { source: 'Dimension', targetHint: 'measured geometric annotation' },
+  { source: 'Dimensions', targetHint: 'measured geometric annotations' },
+  { source: 'Tolerance', targetHint: 'allowable engineering variation' },
+  { source: 'Geometric Dimensioning and Tolerancing', targetHint: 'GD&T standard notation' },
+  { source: 'Part', targetHint: 'single CAD component file' },
+  { source: 'Parts', targetHint: 'single CAD component files' },
+  { source: 'Loft', targetHint: 'feature generated between multiple profiles' },
+  { source: 'Extrude', targetHint: 'linear profile-based feature operation' },
+  { source: 'Fillet', targetHint: 'rounded edge feature' },
+  { source: 'Chamfer', targetHint: 'beveled edge feature' },
+]
+
+export { CAD_GLOSSARY }
