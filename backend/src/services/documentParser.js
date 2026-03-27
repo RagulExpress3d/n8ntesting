@@ -1,5 +1,5 @@
 import mammoth from 'mammoth';
-import pdfParse from 'pdf-parse';
+import { PDFParse } from 'pdf-parse';
 
 const MAX_EXTRACTION_CHARS = 50000;
 
@@ -33,8 +33,10 @@ export async function extractDocument(file) {
     const html = await mammoth.convertToHtml({ buffer: file.buffer });
     structuredContent = html.value || '';
   } else if (extension === 'pdf' || mimeType.includes('pdf')) {
-    const parsed = await pdfParse(file.buffer);
+    const parser = new PDFParse({ data: file.buffer });
+    const parsed = await parser.getText();
     rawText = parsed.text || '';
+    await parser.destroy();
     sourceFormat = 'pdf';
     structuredContent = rawText;
   } else {
